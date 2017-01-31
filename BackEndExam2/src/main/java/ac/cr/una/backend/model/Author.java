@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ac.cr.una.backend.model;
+
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -18,7 +19,6 @@ import javax.persistence.UniqueConstraint;
  *
  * @author ADMIN
  */
-
 @Entity
 @Table(name = "author", catalog = "progra3_exa2", uniqueConstraints = {
     @UniqueConstraint(columnNames = "id_author")})
@@ -54,7 +54,6 @@ public class Author implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-    
 
     @Override
     public int hashCode() {
@@ -89,5 +88,5 @@ public class Author implements Serializable {
     public String toString() {
         return "Author{" + "idAuthor=" + idAuthor + ", name=" + name + '}';
     }
-    
+
 }

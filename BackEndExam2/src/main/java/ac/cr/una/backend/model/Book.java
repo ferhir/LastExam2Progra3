@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ac.cr.una.backend.model;
+
 import java.util.Calendar;
 import java.util.Objects;
 import javax.persistence.CascadeType;
@@ -17,6 +18,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
 /**
  *
  * @author ADMIN
@@ -39,13 +41,13 @@ public class Book {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_type", nullable = false)
     private BookType booktype;
-    
+
     @Column(name = "name", unique = false, nullable = false)
     private String name;
 
     @Column(name = "dateRelease", unique = false, nullable = false)
     private Calendar dateRelease;
-    
+
     @Column(name = "price", unique = false, nullable = false)
     private float price;
 
@@ -108,7 +110,6 @@ public class Book {
     public void setPrice(float price) {
         this.price = price;
     }
-    
 
     @Override
     public int hashCode() {
@@ -161,4 +162,3 @@ public class Book {
     }
 
 }
-

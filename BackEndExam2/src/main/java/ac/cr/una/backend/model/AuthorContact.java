@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ac.cr.una.backend.model;
+
 import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -21,7 +22,6 @@ import javax.persistence.UniqueConstraint;
  *
  * @author ADMIN
  */
-
 @Entity
 @Table(name = "authorcontact", catalog = "progra3_exa2", uniqueConstraints = {
     @UniqueConstraint(columnNames = "id_authorcontact")})
@@ -83,7 +83,6 @@ public class AuthorContact {
     public void setType(String type) {
         this.type = type;
     }
-    
 
     @Override
     public int hashCode() {
@@ -128,4 +127,3 @@ public class AuthorContact {
     }
 
 }
-
