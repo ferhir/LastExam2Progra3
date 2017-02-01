@@ -12,10 +12,17 @@ import ac.cr.una.backend.model.BookType;
  *
  * @author ADMIN
  */
-public class BookTypeImpl implements BookTypeService {
+public class BookTypeServiceImpl implements BookTypeService {
 
     private BookTypeDAO bookTypeDAO;
 
+    public BookTypeServiceImpl() {
+    }
+
+    public BookTypeServiceImpl(BookTypeDAO bookTypeDAO) {
+        this.bookTypeDAO = bookTypeDAO;
+    }
+    
     @Override
     public boolean deleteAll() {
         return bookTypeDAO.deleteAll();

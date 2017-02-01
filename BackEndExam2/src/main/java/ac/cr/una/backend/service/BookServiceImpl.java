@@ -17,6 +17,13 @@ public class BookServiceImpl implements BookService {
 
     private BookDAO bookDAO;
 
+    public BookServiceImpl() {
+    }
+
+    public BookServiceImpl(BookDAO bookDAO) {
+        this.bookDAO = bookDAO;
+    }
+    
     @Override
     public boolean deleteAll() {
         return bookDAO.deleteAll();
